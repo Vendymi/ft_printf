@@ -1,0 +1,63 @@
+// Define the function signature
+
+int ft_printf(const char* format, ...)
+{
+	
+  
+  
+// iterating throught characters to find %
+	
+	int	i;
+	int	n_arg;
+	void	type;
+	
+	
+	i = 0;
+	n_arg = !;
+	while (str[i] != '\0')
+	{
+		while (str[i] != '%')
+		{
+			purchar(str[i]);
+			i++;
+		}
+		if (str[i] == '%')
+		{
+			i++;
+			n_arg += 1;
+			type = ft_checktype(str[i]) // check the type of argument provided (d, i, f, c, s, x, X, o)
+			// what should the function ft_checktype return?
+			
+// once I know the type I need to print I need to convert the argument into character
+ft_findconvert(argv[n_arg], type)
+{
+	char	*return;
+	
+	if (type == 'c') // single character
+		return = function_1;
+	else if (type == 's') // string
+		return = function_2;
+	else if (type == 'p') // void * pointer in hexadecimal format
+		return = function_3;
+	else if (type == 'd') // decimal number
+		return = funtion_4;
+	else if (type == 'i') // integer in base 10
+		return = funtion_5;
+	else if (type == 'u') // unsigned decimal number
+		return = function_6;
+	else if (type == 'x') // hexadecimal lowercase format
+		return = funtion_7;
+	else if (type == 'X') // hexadecimal uppercase format
+		return = funtion_7;
+	else if (type == '%%') // percent sign
+		return = funtion_7;
+		
+		
+	funtion_1 = putchar
+	funtion_2 = iterate through string and putchar
+	funtion_3 = hexadecimal string to convert to char, putchar + putnbr
+	funtion_4 = putnbr
+	funtion_5 = putnbr
+	funtion_6 = putnbr
+
+	
