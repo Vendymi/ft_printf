@@ -40,24 +40,46 @@ ft_findconvert(argv[n_arg], type)
 	else if (type == 'p') // void * pointer in hexadecimal format
 		return = function_3;
 	else if (type == 'd') // decimal number
-		return = funtion_4;
+		return = function_4;
 	else if (type == 'i') // integer in base 10
-		return = funtion_5;
+		return = function_5;
 	else if (type == 'u') // unsigned decimal number
 		return = function_6;
 	else if (type == 'x') // hexadecimal lowercase format
-		return = funtion_7;
+		return = function_7;
 	else if (type == 'X') // hexadecimal uppercase format
-		return = funtion_7;
+		return = function_8;
 	else if (type == '%%') // percent sign
-		return = funtion_7;
+		return = function_9;
 		
 		
-	funtion_1 = putchar
-	funtion_2 = iterate through string and putchar
-	funtion_3 = hexadecimal string to convert to char, putchar + putnbr
-	funtion_4 = putnbr
-	funtion_5 = putnbr
-	funtion_6 = putnbr
+	function_1 = putchar
+	function_2 = iterate through string and putchar
+	function_3 = hexadecimal string to convert to char, putchar + putnbr
+	function_4 = putnbr
+	function_5 = putnbr
+	function_6 = putnbr 
+	function_7 = hexa_low_putnbr
+	function_8 = hexa_up_putnbr
+	function_9 = putchar
+	
+	
+int	ft_findtype(char *str, int i)
+{
+	while (str[i] != '%' && str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	if (str[i] == '\0' || (str[i] == '%' && str[++i] == '\0'))
+		return (-1);
+	else
+		return (i);
+}
+
+ft_check_valid_type(str[i]);
+void	ft_check_valid_type(char c)
+{
+	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'u' || c == 'x' || c == 'X' || c == '%'
 
 	
